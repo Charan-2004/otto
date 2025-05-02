@@ -14,7 +14,7 @@ from pystray import Icon, MenuItem
 from PIL import Image, ImageDraw
 
 # ✅ Google Cloud credentials (change this to your file path)
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"C:\Users\kryog\Desktop\otto\google_credentials.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"C:\Users\google_credentials.json"
 
 # 📁 Memory file
 MEMORY_FILE = "memory.json"
@@ -23,7 +23,7 @@ MEMORY_FILE = "memory.json"
 pygame.mixer.init()
 
 # 🔐 Gemini setup
-genai.configure(api_key="AIzaSyBgqXGe5jEMMS2i1JZBI2iVVfpO-PRRYEk")  # Replace with your key
+genai.configure(api_key="your gemini api key")  # Replace with your key
 model = genai.GenerativeModel("gemini-1.5-flash")
 chat = model.start_chat(history=[])
 
